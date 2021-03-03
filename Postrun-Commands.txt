@@ -1,0 +1,26 @@
+-----------First we run the container, and then the following command--------------
+docker-compose exec web ls
+-----------------------------------------------------------------------------------
+Docker exec is used to run commands on the running container.
+Note: This command is run on the container, not on your local machine.
+=========output========
+Dockerfile          docker-compose.yml  routes
+README.md           node_modules        views
+app.js              package.json        yarn.lock
+bin                 public
+=======================
+
+---------------------------Spinning up a container and run the test suite----------
+docker-compose run web npm test
+-----------------------------------------------------------------------------------
+Docker run is used to run commands on a new container.
+=========output========
+Creating docker-compose-tutorial_web_run ... done
+
+> docker-compose-tutorial@0.0.0 test /app
+> jest
+
+ PASS  tests/DummyTests.test.js (10.42 s)
+  This is a dummy block of tests
+    ✓ should run successfully (1 ms)
+=======================
