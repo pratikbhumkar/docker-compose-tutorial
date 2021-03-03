@@ -1,0 +1,11 @@
+-----------First we run the container, and then the following command--------------
+docker-compose exec web ls
+-----------------------------------------------------------------------------------
+Note: This command is run on the container, not on your local machine.
+=========output========
+Dockerfile          docker-compose.yml  routes
+README.md           node_modules        views
+app.js              package.json        yarn.lock
+bin                 public
+=======================
+
